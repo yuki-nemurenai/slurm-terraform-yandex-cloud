@@ -1,6 +1,4 @@
-vm1_name = "vm-1-a"
-vm2_name = "vm-2-b"
-vm3_name = "vm-3-c"
+vm_name = "vm"
 
 image_id = "fd82tb3u07rkdkfte3dn"
 

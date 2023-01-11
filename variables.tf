@@ -1,12 +1,4 @@
-variable "vm1_name" {
-  type        = string
-}
-
-variable "vm2_name" {
-  type        = string
-}
-
-variable "vm3_name" {
+variable "vm_name" {
   type        = string
 }
 
@@ -50,3 +42,11 @@ variable "public_ssh_key_path" {
   default = ""
 }
 
+variable "az" {
+  type = list(string)
+  default = [
+    "ru-central1-a",
+    "ru-central1-b",
+    "ru-central1-c"
+  ]
+}
