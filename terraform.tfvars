@@ -30,3 +30,4 @@ healthcheck = {
   path = "/"
 }
 
+public_ssh_key_path = ""

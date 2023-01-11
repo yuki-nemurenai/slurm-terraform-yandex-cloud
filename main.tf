@@ -23,7 +23,7 @@ resource "yandex_compute_instance" "this" {
   }
 
   metadata = {
-    ssh-keys = var.public_ssh_key_path != "" ? var.public_ssh_key_path : "yc-user:${tls_private_key.rsa_key.public_key_openssh}" 
+    ssh-keys = var.public_ssh_key_path != "" ? var.public_ssh_key_path : "yc-user:${tls_private_key.rsa_key[0].public_key_openssh}" 
   }
   allow_stopping_for_update = true
 }
