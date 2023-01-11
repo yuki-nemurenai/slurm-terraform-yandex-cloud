@@ -31,3 +31,5 @@ healthcheck = {
 }
 
 public_ssh_key_path = ""
+
+vm_count = 5

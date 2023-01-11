@@ -50,3 +50,7 @@ variable "az" {
     "ru-central1-c"
   ]
 }
+
+variable "vm_count" {
+  type = number
+}

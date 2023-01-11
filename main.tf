@@ -1,8 +1,8 @@
 resource "yandex_compute_instance" "this" {
-  count	      = 3
+  count	      = var.vm_count
   name        = "${local.resource_name}-${var.vm_name}-${count.index}"
   platform_id = "standard-v1"
-  zone        = var.az[count.index]
+  zone        = var.az[count.index % length(var.az)]
   labels      = var.labels
 
   resources {
@@ -18,7 +18,7 @@ resource "yandex_compute_instance" "this" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.this[count.index].id
+    subnet_id = yandex_vpc_subnet.this[var.az[count.index % 3]].id
     nat      = true
   }
 
