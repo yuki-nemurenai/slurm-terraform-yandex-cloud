@@ -6,7 +6,7 @@ variable "labels" {
   type 	      = map(string)
 }
 
-variable "image_id" {
+variable "image_family" {
   type        = string
 }
 

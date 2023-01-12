@@ -1,6 +1,6 @@
 vm_name = "vm"
 
-image_id = "fd82tb3u07rkdkfte3dn"
+image_family = "ubuntu-2204-lts"
 
 labels = {
   "project" = "slurm"

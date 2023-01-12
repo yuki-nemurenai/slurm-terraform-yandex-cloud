@@ -1,3 +1,6 @@
+data "yandex_compute_image" "this" {
+  family = var.image_family
+}
 resource "yandex_compute_instance" "this" {
   count	      = var.vm_count
   name        = "${local.resource_name}-${var.vm_name}-${count.index}"
@@ -12,7 +15,7 @@ resource "yandex_compute_instance" "this" {
 
   boot_disk {
     initialize_params {
-      image_id = var.image_id
+      image_id = data.yandex_compute_image.this.id
       size = var.resources.disk
     }
   }
