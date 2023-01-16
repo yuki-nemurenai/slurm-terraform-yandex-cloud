@@ -42,6 +42,11 @@ variable "public_ssh_key_path" {
   default = ""
 }
 
+variable "private_ssh_key_path" {
+  type = string
+  default = ""
+}
+
 variable "az" {
   type = list(string)
   default = [

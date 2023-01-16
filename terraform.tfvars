@@ -1,6 +1,6 @@
 vm_name = "vm"
 
-image_family = "ubuntu-2204-lts"
+image_family = "centos-7"
 
 labels = {
   "project" = "slurm"
@@ -30,6 +30,7 @@ healthcheck = {
   path = "/"
 }
 
-public_ssh_key_path = ""
+public_ssh_key_path = "/root/.ssh/yc_rsa4096.pub"
+private_ssh_key_path = "/root/.ssh/yc_rsa4096"
 
-vm_count = 5
+vm_count = 3
